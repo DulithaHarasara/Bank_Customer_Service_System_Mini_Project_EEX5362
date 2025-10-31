@@ -1,24 +1,18 @@
 import csv
 
-# Data
+# Data rows
 rows = [
-    ["customer_id", "name", "age", "gender", "arrival_time", "service_type"],
-    ["C1001", "Janith Perera", 34, "M", "2025-05-10 09:15:00", "Cash Deposit"],
-    ["C1002", "Nimasha Silva", 28, "F", "2025-05-10 09:18:00", "Account Inquiry"],
-    ["C1003", "Sunil Fernando", 45, "M", "2025-05-10 09:22:00", "Cash Withdrawal"],
-    ["C1004", "Kamala Devi", 52, "F", "2025-05-10 09:30:00", "Loan Application"],
-    ["C1005", "Ruwan Jayasinghe", 39, "M", "2025-05-10 09:45:00", "Cash Deposit"],
-    ["C1006", "Thilini Kumari", 25, "F", "2025-05-10 10:00:00", "Cheque Deposit"],
-    ["C1007", "Lasith Mendis", 61, "M", "2025-05-10 10:15:00", "Account Inquiry"],
-    ["C1008", "Shamila Ranasinghe", 33, "F", "2025-05-10 10:30:00", "Cash Withdrawal"],
-    ["C1009", "Aruna Dissanayake", 27, "M", "2025-05-10 11:00:00", "ATM Card Issue"],
-    ["C1010", "Priyani Wickramasinghe", 41, "F", "2025-05-10 11:15:00", "Loan Application"]
+    ["teller_id", "name", "counter_type", "shift_start", "shift_end", "status"],
+    ["T001", "A. Gunawardena", "Cash Counter", "08:00:00", "16:00:00", "Active"],
+    ["T002", "B. Perera", "General Inquiry", "08:00:00", "16:00:00", "Active"],
+    ["T003", "C. Fernando", "Cash Counter", "09:00:00", "17:00:00", "Active"],
+    ["T004", "D. Silva", "Loan Desk", "09:00:00", "15:00:00", "On Break"]
 ]
 
 # File name
-filename = "customers.csv"
+filename = "teller.csv"
 
-# Write to CSV
+# Write CSV file
 with open(filename, mode='w', newline='', encoding='utf-8') as file:
     writer = csv.writer(file)
     writer.writerows(rows)
